@@ -27,6 +27,8 @@ In the next command -
 
 const socket = io ("http: // HERE: 3000");
 
+
+------------------------------------------
 <div id="header" align="center">
-  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
-</div>  https://media.giphy.com/media/7VzgMsB6FLCilwS30v/giphy.gif"
+  <img src="https://im.ezgif.com/tmp/ezgif-1-987ba118d9.gif" />
+</div> 
