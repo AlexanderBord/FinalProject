@@ -5,13 +5,15 @@ An Android app that allows you to send and read messages using voice commands.
 Server side 
 ===========
 Open first console (server side - in the main path "VoiceTranslate \ server")
-and enter the command - "node index.js" to run the server.
+first, install node modules with the command - "npm install" .
+then, enter the command - "node index.js" to run the server.
 
 
 Client side 
 ===========
 Open a second console (client side - in the main path "VoiceTranslate \ finalProject")
- and enter the command - "npx react-native start" to run the metro.
+first, install node modules with the command - "npm i -g npm@latest" .
+then, enter the command - "npx react-native start" to run the metro.
 
 Open a third console (client side - in the main path "VoiceTranslate \ finalProject") 
 and enter the command - npx react-native run-android to run the program.
@@ -24,3 +26,7 @@ To connect to a socket for communication between the server side and the client,
 In the next command -
 
 const socket = io ("http: // HERE: 3000");
+
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+</div>  https://media.giphy.com/media/7VzgMsB6FLCilwS30v/giphy.gif"
