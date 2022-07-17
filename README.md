@@ -22,4 +22,5 @@ To connect to a socket for communication between the server side and the client,
 "VoiceTranslate \ finalProject \ src \ screens \ AuthenticationScreen.js" 
 
 In the next command -
+
 const socket = io ("http: // HERE: 3000");
