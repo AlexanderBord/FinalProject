@@ -1,5 +1,6 @@
-**FinalProject - Voice translate**
---------------------------------
+FinalProject - Voice translate
+==============================
+An Android app that allows you to send and read messages using voice commands.
 
 Server side 
 ===========
