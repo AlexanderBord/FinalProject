@@ -32,6 +32,4 @@ In the next command
 
 
 ------------------------------------------
-<div id="header" align="center">
-  <img src="https://im.ezgif.com/tmp/ezgif-1-987ba118d9.gif" />
-</div> 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/74188589/179405846-026f1b44-ffca-43c1-9b57-1bc2a582c875.gif)
