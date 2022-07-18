@@ -15,10 +15,13 @@ const socket = io("http://10.0.0.13:3000"); //https://wa-assist.herokuapp.com/
 // const socket = io("http://10.0.0.2:3000"); -- -- dev purposes
 // https://alex-bord.herokuapp.com/ -- dev purposes
 
+
+//reference to socket
 export const getSocket = () =>{
     return socket;
 }
 
+//AuthenticationScreen , responsible for linking the user to the WhatsApp app
 const AuthenticationScreen = () => {
     const [qrCode, setQrCode] = useState(null);
     const [readyToAuthenticate, setReadyToAuthenticate] = useState(false);
