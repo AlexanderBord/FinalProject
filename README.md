@@ -15,7 +15,7 @@ Client side
 ===========
 Open a second console (client side - in the main path "VoiceTranslate \ finalProject")
 first, install node modules with the command
-- npm i -g npm@latest
+- npm install 
 - then, enter the command - "npx react-native start" to run the metro.
 
 Open a third console (client side - in the main path "VoiceTranslate \ finalProject") 
