@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Router from './Router';
 
-//From initializing navigation, is responsible for checking with the asynchronous storage the status of the user's link
+//Route Initializer, is responsible for checking with the asynchronous storage the status of the user's link
 //to the system and, accordingly, to initialize the screens required to transfer it to the appropriate screen.
 const RouteInitializer = () => {
     const [initialized, setInitialized] = useState(false)
