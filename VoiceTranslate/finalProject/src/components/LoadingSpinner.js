@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, ActivityIndicator } from 'react-native';
 
-
+//Component responsible for the rotating spinner to display a user indication to the TTS output
 const LoadingSpinner = () => {
     return (
     <View style={styles.container}>
@@ -11,9 +11,8 @@ const LoadingSpinner = () => {
 
 export default LoadingSpinner;
 
-
+//styles
 const styles = StyleSheet.create({
-
     container: {
         flex: 1,
         alignItems: 'center',
