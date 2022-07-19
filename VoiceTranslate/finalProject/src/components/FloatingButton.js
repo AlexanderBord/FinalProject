@@ -5,6 +5,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { setLoggedIn, setWhatsAppAuthentication } from '../asyncStorage/AsyncStorage';
 import * as Animatable from 'react-native-animatable';
 
+//A floating button component inside the main screen, used to display the settings and a logout button
 const FloatingButton = ({ navigation }) => { 
 
     //handle the log out procedure, update the relevant states and navigates to sign in screen
@@ -35,12 +36,12 @@ const FloatingButton = ({ navigation }) => {
     );
 }
 
+//styles
 const styles = StyleSheet.create({
     actionButtonIcon: {
         fontSize: 20,
         height: 22,
         color: 'white',
-
     },
     floatingView: {
         flex: 1,
