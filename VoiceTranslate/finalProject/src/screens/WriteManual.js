@@ -5,14 +5,18 @@ import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import styles from '../styles/AuthenticationScreenStyles';
 
+//Write Manual screen, responsible for displaying the application manual in case of sending a message
 const WriteManual = () => {
     
     const [info, setInfo] = useState(false);
     const [steps, setSteps] = useState(false);
 
+    //header animation
     const headerAnimationEnd = () => {
         setInfo(!info);
     }
+    
+    //body animation
     const infoAnimationEnd = () => {
         setSteps(!steps);
     }
