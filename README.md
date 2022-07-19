@@ -1,4 +1,4 @@
-FinalProject - Voice translate
+FinalProject - Voice Translate
 ==============================
 An Android app that allows you to send and read messages using voice commands.
 
