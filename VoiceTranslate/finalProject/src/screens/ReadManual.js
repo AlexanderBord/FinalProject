@@ -5,13 +5,16 @@ import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import styles from '../styles/AuthenticationScreenStyles';
 
+//User instructions screen, responsible for displaying the application user instructions in case of reading a message
 const ReadManual = () => {
     const [info, setInfo] = useState(false);
     const [steps, setSteps] = useState(false);
 
+    //header animation
     const headerAnimationEnd = () => {
         setInfo(!info);
     }
+    //body animation
     const infoAnimationEnd = () => {
         setSteps(!steps);
     }
