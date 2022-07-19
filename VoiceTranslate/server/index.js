@@ -5,10 +5,11 @@ const app = express();
 const server = require("http").createServer(app);
 const io = require('socket.io')(server);
 const port = process.env.PORT || 3000;
-
 server.listen(port, () => console.log("server running on port: " + port));
+
 app.use(express.static(__dirname));
 
+//global variables
 var waClient = {};
 var QR = "";
 
@@ -16,23 +17,28 @@ var QR = "";
 //socket listeners to relevant events
 io.on("connection", socket => {
 
+  //listen to send a message event
   socket.on ("sendMessage", async  message => {
     const state = await waClient.sendText(message.contactNumber, message.messageToSend);
   });
-  socket.on ("requestMessages", async  contactNumber => { //get all messages from the wabot 
-    
+  
+  //listen to request messages event
+  socket.on ("requestMessages", async  contactNumber => { 
     const msgs = await waClient.getAllMessagesInChat(contactNumber, false, false);
     socket.emit("msgs", msgs); //send messages to client side
   });
+  
+  //listen to connect to whatsApp event
   socket.on ("connectToWa", async  status => {
       connectToWhatsApp();
   });
 
-  //wabot event listener
+  //wabot qr event listener
   ev.on('qr.**', async qrcode => {
     socket.emit("QrCode", qrcode);
     QR = qrcode;
   });
+  //wabot session event listener
   ev.on('sessionData.**', async (sessionData, sessionId) => {
     socket.emit("sessionIsOn", sessionData);
   });
@@ -180,4 +186,3 @@ app.route("/").get((req, res) => {
     <script src="dist/js/main.min.js"></script>
 </body> </html>` )
 })
-
