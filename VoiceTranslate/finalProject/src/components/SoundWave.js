@@ -74,7 +74,6 @@ export default class App extends Component {
             );
         }
     }
-
     render() {
         return (
             <View style={styles.container}>
@@ -86,7 +85,7 @@ export default class App extends Component {
     }
 }
 
-
+//styles
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -94,5 +93,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
-
 });
