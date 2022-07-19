@@ -1,9 +1,6 @@
-//Lib imports---------
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-//--------------------
-//screens imports---------
 import HomeScreen from '../screens/HomeScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import WriteManual from '../screens/WriteManual';
@@ -11,10 +8,11 @@ import ReadManual from '../screens/ReadManual';
 import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import AuthenticationScreen from '../screens/AuthenticationScreen';
-//--------------------
 
+//reference to a stack navigator 
 const Stack = createNativeStackNavigator();
-//Router component-----
+
+//Program Router, receive props as a parameter from the routeInitializer screen and route the user accordingly
 const Router = (props) => {
     return (
         <NavigationContainer>
@@ -23,7 +21,6 @@ const Router = (props) => {
                     name="SignIn"
                     component={SignInScreen}
                     options={{ headerShown: false }}
-                // options={{ title: 'Login' }}
                 />
                 <Stack.Screen
                     name="SignUp"
