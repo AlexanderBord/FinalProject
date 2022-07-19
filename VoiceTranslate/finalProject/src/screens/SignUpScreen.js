@@ -7,7 +7,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import { writeUserInDb } from '../dataBase/FireBase';
 import styles from '../styles/SignUpStyles';
 
-//Registration screen, responsible for registering the user for the application using the database
+//Sign Up Screen, responsible for registering the user for the application using the database
 const SignUpScreen = ({ navigation }) => {
     const [data, setData] = React.useState({
         userName: '',
@@ -23,7 +23,7 @@ const SignUpScreen = ({ navigation }) => {
     const userNameValidator = /^[a-zA-Z0-9]{3,}\S+$/;
     const passwordValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]){8,}\S+$/;
 
-    //user input handlers
+    //user name text input 
     const userNameTextInputChange = (val) => {
         if (val.match(userNameValidator)) {
             setData({
@@ -34,7 +34,7 @@ const SignUpScreen = ({ navigation }) => {
             });
         }
     }
-    //userNameValidation
+    //user name validation
     const userNameValidation = (val) => {
         if (val.match(userNameValidator)) {
             setData({
@@ -65,7 +65,7 @@ const SignUpScreen = ({ navigation }) => {
             });
         }
     };
-    //passwordValidation
+    //password validation
     const passwordValidation = (val) => {
         if (val.match(passwordValidator)) {
             setData({
@@ -81,7 +81,7 @@ const SignUpScreen = ({ navigation }) => {
             });
         }
     };
-    //ConfirmPassword input handlers
+    //ConfirmPassword text input change handlers
     const confirmPasswordTextInputChange = (val) => {
         setData({
             ...data,
@@ -94,7 +94,7 @@ const SignUpScreen = ({ navigation }) => {
             });
         }
     };
-    //ConfirmPasswordValidation
+    //Confirm Password validation
     const confirmPasswordValidation = (val) => {
         if (val.match(data.password)) {
             setData({
@@ -110,19 +110,24 @@ const SignUpScreen = ({ navigation }) => {
             });
         }
     };
+    //update secure text 
     const updateSecureTextEntry = () => {
         setData({
             ...data,
             secureTextEntry: !data.secureTextEntry
         });
     };
+    //update confirm secure text
     const updateConfirmSecureTextEntry = () => {
         setData({
             ...data,
             confirm_secureTextEntry: !data.confirm_secureTextEntry
         });
     };
+    
+    //A function that manages the user registration for the application
     const signUpHandle = async () => {
+        
         if (data.userName.length === 0 || data.isUserNameValid === false) {
             Alert.alert(
                 "Please enter a valid username"
