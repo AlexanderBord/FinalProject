@@ -11,12 +11,10 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import { setWhatsAppAuthentication } from '../asyncStorage/AsyncStorage';
 import { io } from "socket.io-client";
 
-const socket = io("http://10.0.0.13:3000"); //https://wa-assist.herokuapp.com/
-// const socket = io("http://10.0.0.2:3000"); -- -- dev purposes
-// https://alex-bord.herokuapp.com/ -- dev purposes
+//refernce to a socket, apply your IPV4 address for a server side connection 
+const socket = io("http://HERE:3000"); // Application Site for production - https://wa-assist.herokuapp.com/  
 
-
-//reference to socket
+//returns reference to a socket
 export const getSocket = () =>{
     return socket;
 }
@@ -30,34 +28,43 @@ const AuthenticationScreen = () => {
     const [instructions, setInstructions] = useState(false);
     const navigation = useNavigation();
 
+    //copy button animation
     const toggleCopy = () => {
         setCopy(!copy);
     }
+    //refresh button animation
     const toggleRefresh = () => {
         setRefresh(!refresh);
     }
+    //instructions animation
     const toggleInstructions = () => {
         setInstructions(!instructions);
     }
 
+    //Sends connection request to WhatsApp via socket
     function connectToWa() {
         setReadyToAuthenticate(false);
         socket.emit("connectToWa", true);
     }
-
+    //main listener to a session and qr events
     useEffect(() => {
+        
+        //when session event got received, it will navigate the user to a home screen
         socket.on("sessionIsOn", session => {
             setQrCode(null);
             setWhatsAppAuthentication("authenticated"); 
             navigation.navigate('Home');
         });
 
+        //qrCode event, will turn off the qrCode image when the user will scan the qrCode 
         socket.on("QrCode", qrCode => {
             setQrCode(qrCode);
             setReadyToAuthenticate(true);
         });
-
+        
+        //connect to whatsApp function
         connectToWa();
+        
     }, []);
 
     return (
@@ -67,7 +74,6 @@ const AuthenticationScreen = () => {
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
         >
-
             <View style={styles.header_view}>
                 <Animatable.View animation="bounceIn" duration={2000}>
                     <Text style={styles.header}>Welcome!</Text>
