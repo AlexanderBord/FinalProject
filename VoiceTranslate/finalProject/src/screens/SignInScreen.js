@@ -11,6 +11,7 @@ import styles from '../styles/SignInStyles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
+//Sign In Screen, responsible for the user entering the application, works in front of the database
 const SignInScreen = ({ navigation }) => {
     const [data, setData] = React.useState({
         userName: '',
@@ -22,7 +23,7 @@ const SignInScreen = ({ navigation }) => {
     });
     const { colors } = useTheme();
 
-    //userNameTextInputChange
+    //user name text input
     const userNameTextInputChange = (val) => {
         setData({
             ...data,
@@ -31,7 +32,7 @@ const SignInScreen = ({ navigation }) => {
         });
 
     }
-    //userNameValidation
+    //user name validation
     const userNameValidation = (val) => {
         if (val.trim().length >= 4) {
             setData({
@@ -63,7 +64,7 @@ const SignInScreen = ({ navigation }) => {
             });
         }
     };
-    //passwordValidation
+    //password validation
     const passwordValidation = (val) => {
         if (val.trim().length >= 8) {
             setData({
@@ -79,7 +80,7 @@ const SignInScreen = ({ navigation }) => {
             });
         }
     };
-
+    //secure text upadte
     const updateSecureTextEntry = () => {
         setData({
             ...data,
@@ -87,8 +88,11 @@ const SignInScreen = ({ navigation }) => {
         });
     };
 
+    //A function that manages the user's login to the application
     const loginHandle = async (userName, password) => {
+        
         var whatsAppAuthentication = await AsyncStorage.getItem('whatsApp');
+        
         if (data.userName.length == 0 || data.password.length == 0) {
             Alert.alert(
                 'Wrong Input!',
