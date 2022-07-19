@@ -15,6 +15,7 @@ import {
 } from '../utilities/assistButtonUtilities';
 
 
+//global variables
 var languageObject = {};
 var regExOfCommands = {};
 var assistantMessages = {};
@@ -23,11 +24,12 @@ var automaticRead;
 var VG;
 var chosenLanguage;
 
-
+//get automatic reading status
 export const getAutoRead = () => {
     return automaticRead;
 };
 
+//get language
 export const getLanguage = () => {
     switch (chosenLanguage) {
         case "English":
@@ -60,11 +62,13 @@ export const getLanguage = () => {
     return languageObject;
 }
 
-
+//get voice gender 
 export const getVoiceGender = () => {
+    
     let voiceGender;
 
     switch(languageObject.userInput){
+            
         case userInput_EN:
         case userInput_HE:
             if (VG === "Women") {
@@ -102,6 +106,7 @@ export const getVoiceGender = () => {
     return voiceGender;
 };
 
+//Settings screen, holds the features and the manual of the application
 const SettingsScreen = ({ navigation }) => {
 
     const [autoRead, setAutoRead] = useState(automaticRead);
@@ -113,6 +118,7 @@ const SettingsScreen = ({ navigation }) => {
     VG = voiceGender;
     chosenLanguage = language;
 
+    //manual animation
     const toggleManual = () => {
         setIsManualOn(!isManualOn);
     }
