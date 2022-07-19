@@ -4,6 +4,8 @@ import styles from '../styles/HomeScreenStyles';
 import AssistButton from '../components/AssistButton';
 import FloatingButton from '../components/FloatingButton';
 
+//Home screen, holds the following components - AssistButton (main activity),
+//and FloatingButton (settings and disconnection)
 const HomeScreen = ({ navigation }) => {
     return (
         <LinearGradient
