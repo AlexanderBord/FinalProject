@@ -2,17 +2,33 @@ FinalProject - Voice Translate
 ==============================
 An Android app that allows you to send and read messages using voice commands.
 
-## Setup
+## Built With
 
-### Server side -
+- Text to speech : `react-native-tts`
+
+- Speech to text : `react-native-voice`
+
+ * <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+ * <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black"/>
+ * <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"/>
+ * <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>
+ * <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+ * <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>    
+ * <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"/> 
+ * <img src="https://img.shields.io/badge/Socket.io-010101?&style=for-the-badge&logo=Socket.io&logoColor=white"/>
+    
+    
+## Installation
+
+The program has a server side and a client side so we will need to perform separate installations.
+
+### Server side 
 
 Open first console in the main path `VoiceTranslate \ server` and install node modules with the command 
 - `npm install` 
 - then, enter the command `node index.js` to run the server.
 
-
-
-### Client side -
+### Client side 
 
 Open a second console in the main path `VoiceTranslate \ finalProject` and install node modules with the command
 - `npm install `
@@ -22,9 +38,7 @@ Open a third console in the main path `VoiceTranslate \ finalProject`
 and enter the command 
 - `npx react-native run-android` to run the program.
 
-
-
-### Connection between server side and client -
+### Connection between server side and client 
 
 To connect to a socket for communication between the server side and the client, enter an IPV4 address of the device, in line 15, in the following file - 
 `VoiceTranslate \ finalProject \ src \ screens \ AuthenticationScreen.js`
