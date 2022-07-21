@@ -22,13 +22,13 @@ An Android app that allows you to send and read messages using voice commands.
 
 The program has a server side and a client side so we will need to perform separate installations.
 
-### Server side 
+### Back End 
 
 Open first console in the main path `VoiceTranslate \ server` and install node modules with the command 
 - `npm install` 
 - then, enter the command `node index.js` to run the server.
 
-### Client side 
+### Front End 
 
 Open a second console in the main path `VoiceTranslate \ finalProject` and install node modules with the command
 - `npm install `
