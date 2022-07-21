@@ -38,7 +38,7 @@ Open a third console in the main path `VoiceTranslate \ finalProject`
 and enter the command 
 - `npx react-native run-android` to run the program.
 
-### Connection between server side and client 
+### Communication between back end and front end
 
 To connect to a socket for communication between the server side and the client, enter an IPV4 address of the device, in line 15, in the following file - 
 `VoiceTranslate \ finalProject \ src \ screens \ AuthenticationScreen.js`
@@ -49,7 +49,7 @@ In the next command
 
 ## Folder structure
 
-### Client Side (FinalProject)
+### Front End (FinalProject)
 
 - `src`
   - `asyncStorage`
@@ -77,7 +77,7 @@ In the next command
     - `assistButtonUtilities.js`: contains Voice Assistant vocabulary, regular expressions, and user input comparison commands.
 
 
-### Server Side (server)
+### Back End (server)
 
 - `dist`: folder that holds the app site design.
 - `index.js`:responsible for the messaging app and the app website.
