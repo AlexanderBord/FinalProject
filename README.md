@@ -1,4 +1,4 @@
-Voice Translate - Final project of my computer science degree
+Voice Translate(AI based)
 =============================================================
 Android application that allows you to send and read messages using voice commands.
 
