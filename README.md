@@ -1,6 +1,6 @@
-Voice Translate(Final project)
-==============================
-An Android app that allows you to send and read messages using voice commands.
+Voice Translate - Final project of my computer science degree
+=============================================================
+Android application that allows you to send and read messages using voice commands.
 
 ## Built With
 
